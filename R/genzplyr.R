@@ -2,9 +2,9 @@
 NULL
 
 #' Yeet rows from your data
-#' 
+#'
 #' Remove rows that don't pass the vibe check (filter equivalent)
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @param ... Logical predicates to keep rows
 #' @return A data frame with yeeted rows removed
@@ -16,9 +16,9 @@ yeet <- function(.data, ...) {
 }
 
 #' Vibe check your columns
-#' 
+#'
 #' Keep only the columns that pass the vibe check (select equivalent)
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @param ... Columns to keep
 #' @return A data frame with selected columns
@@ -30,9 +30,9 @@ vibe_check <- function(.data, ...) {
 }
 
 #' Glow up your data
-#' 
+#'
 #' Transform or create new columns (mutate equivalent)
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @param ... Name-value pairs of expressions
 #' @return A data frame with new/modified columns
@@ -44,9 +44,9 @@ glow_up <- function(.data, ...) {
 }
 
 #' No cap summary stats
-#' 
+#'
 #' Get the real stats, no cap (summarise equivalent)
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @param ... Name-value pairs of summary expressions
 #' @return A data frame with summary statistics
@@ -58,9 +58,9 @@ no_cap <- function(.data, ...) {
 }
 
 #' Sort by slay factor
-#' 
+#'
 #' Arrange rows by columns (arrange equivalent)
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @param ... Variables to sort by
 #' @return A sorted data frame
@@ -72,9 +72,9 @@ slay <- function(.data, ...) {
 }
 
 #' Squad up your data
-#' 
+#'
 #' Group by categories to analyze squads (group_by equivalent)
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @param ... Variables to group by
 #' @return A grouped data frame
@@ -86,9 +86,9 @@ squad_up <- function(.data, ...) {
 }
 
 #' Disband the squad
-#' 
+#'
 #' Remove grouping (ungroup equivalent)
-#' 
+#'
 #' @param .data A grouped data frame
 #' @return An ungrouped data frame
 #' @export
@@ -99,9 +99,9 @@ disband <- function(.data) {
 }
 
 #' Lowkey rename columns
-#' 
+#'
 #' Change column names on the down-low (rename equivalent)
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @param ... Name-value pairs (new_name = old_name)
 #' @return A data frame with renamed columns
@@ -113,9 +113,9 @@ lowkey <- function(.data, ...) {
 }
 
 #' Periodt - keep distinct rows
-#' 
+#'
 #' Remove duplicate rows, and that's on periodt (distinct equivalent)
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @param ... Optional columns to determine uniqueness
 #' @return A data frame with unique rows
@@ -127,9 +127,9 @@ periodt <- function(.data, ...) {
 }
 
 #' Main character energy - pull a column
-#' 
+#'
 #' Extract a column as a vector (pull equivalent)
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @param var Column to extract
 #' @return A vector
@@ -141,9 +141,9 @@ main_character <- function(.data, var) {
 }
 
 #' Send it - take the first n rows
-#' 
+#'
 #' Get the top rows (head/slice_head equivalent)
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @param n Number of rows to keep
 #' @return A data frame with first n rows
@@ -155,9 +155,9 @@ send_it <- function(.data, n = 6) {
 }
 
 #' Its giving... count occurrences
-#' 
+#'
 #' Count observations by group (count equivalent)
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @param ... Variables to count by
 #' @return A data frame with counts
@@ -169,15 +169,53 @@ its_giving <- function(.data, ...) {
 }
 
 #' Bussin analysis
-#' 
+#'
 #' Chain multiple operations when your analysis is absolutely bussin
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @return The data frame (for piping)
 #' @export
 bussin <- function(.data) {
   .data
 }
+
+#' Joining in The Thick Of It
+#'
+#' Join everything from the screen, to the ring, to the pen, to the king...
+#'
+#' @param x,y Twinnin data frames, tibbles, or lazy data frames (where have they been?)
+#' @param type The type of join you're using - can be "inner", "left", "right", or "full"
+#' @param ... Additional parameters to be passed into the join functions
+#' @export
+thick_of_it <- function(x, y, type, ...) {
+  if (type == "inner") {
+  new <-  inner_join(x, y, ...)
+  }
+  if (type == "left") {
+  new <- left_join(x, y, ...)
+  }
+  if (type == "right") {
+  new <- right_join(x, y, ...)
+  }
+  if (type == "full") {
+  new <- full_join(x, y, ...)
+  }
+  return(new)
+}
+
+
+#' SIX-SEVEN!!!!!!!!!
+#'
+#' @description
+#' SIX-SEVEN! SIX-SEVEN! SIX-SEVEN! SIX-SEVEN! SIX-SEVEN! SIX-SEVEN! SIX-SEVEN!
+#'
+#' @param n HOW MANY TIMES ARE YOU YELLING SIX-SEVEN?!!!!!!
+#'
+#' @export
+six_seven <- function(n) {
+  print(paste(rep("6-7!", n), collapse = " "))
+}
+
 
 .onAttach <- function(libname, pkgname) {
   packageStartupMessage("genzplyr loaded fr fr \U0001f485\nYour data wrangling is about to be bussin no cap")
