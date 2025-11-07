@@ -179,6 +179,86 @@ bussin <- function(.data) {
   .data
 }
 
+#' left_join()	link_up()
+#' 
+#' Merge datasets but keep only your day-ones (left table stays main squad)
+#' 
+#' @param x A data frame or tibble (main squad)
+#' @param y A data frame or tibble (joining squad)
+#' @param by Columns to join by
+#' @return A merged data frame
+#' @example
+#' df1 <- data.frame(id = 1:3, name = c("Alice", "Bob", "Charlie"))
+#' df2 <- data.frame(id = c(2, 3, 4), score = c(90, 85, 88))
+#' df1 |> link_up(df2, by = "id")
+#' @export
+link_up <- function(x, y, ...) {
+  left_join(x, y, ...)
+}
+
+#' right_join()	clout_chase()
+#' 
+#' Merge, but the other chums call the shots on who stays (right table is main squad)
+#' 
+#' @param x A data frame or tibble (main squad)
+#' @param y A data frame or tibble (joining squad)
+#' @param by Columns to join by
+#' @return A merged data frame
+#' @export
+clout_chase <- function(x, y, ...) {
+  right_join(x, y, ...)
+}
+
+#' inner_join()	mutuals_only()
+#' 
+#' Merge, but only keep rows where both tables are mutually following each other
+#' 
+#' @param x A data frame or tibble
+#' @param y A data frame or tibble
+#' @param by Columns to join by
+#' @return A merged data frame
+#' @export
+mutuals_only <- function(x, y, ...) {
+  inner_join(x, y, ...)
+}
+
+#' full_join()	everyone_in_the_groupchat()
+#' 
+#' Bring everyone, even if messy (keeps all rows)
+#' 
+#' @param x A data frame or tibble
+#' @param y A data frame or tibble
+#' @return A merged data frame
+#' @export
+everyone_in_the_groupchat <- function(x, y, ...) {
+  full_join(x, y, ...)
+}
+
+#' anti_join()	ghost()
+#' 
+#' Forget about those who don't vibe with you (remove non-matching rows)
+#' 
+#' @param x A data frame or tibble
+#' @param y A data frame or tibble
+#' @return A data frame with non-matching rows
+#' @export
+ghost <- function(x, y, ...) {
+  anti_join(x, y, ...)
+}
+
+#' semi_join()	only_the_reals()
+#' 
+#' Just keep the rows that vibe with both tables (matching rows only)
+#' 
+#' @param x A data frame or tibble
+#' @param y A data frame or tibble
+#' @return A data frame with matching rows
+#' @export
+only_the_reals <- function(x, y, ...) {
+  semi_join(x, y, ...)
+}
+
+
 .onAttach <- function(libname, pkgname) {
   packageStartupMessage("genzplyr loaded fr fr \U0001f485\nYour data wrangling is about to be bussin no cap")
 }

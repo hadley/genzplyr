@@ -125,6 +125,44 @@ data |>
   disband()
 ```
 
+## Banding together: Joins
+Using the following tables:
+```r
+df1 <- data.frame(id = 1:3, name = c("Alice", "Bob", "Charlie"))
+df2 <- data.frame(id = c(2, 3, 4), score = c(90, 85, 88))
+```
+
+### Left join
+```r
+df1 |> link_up(df2, by = "id")
+```
+
+### Right join
+```r
+df1 |> clout_chase(df2, by = "id")
+```
+
+### Inner join
+```r
+df1 |> mutuals_only(df2, by = "id")
+```
+
+### Full join
+```r
+df1 |> everyone_in_the_groupchat(df2, by = "id")
+```
+
+### Anti join
+```r
+df1 |> ghost(df2, by = "id")
+```
+
+### Semi join
+```r
+df1 |> only_the_reals(df2, by = "id")
+```
+
+
 ## Combining with regular dplyr
 
 Mix and match! It's all compatible:

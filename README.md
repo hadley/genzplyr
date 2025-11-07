@@ -28,6 +28,13 @@ pak::pak("hadley/genzplyr")
 | `pull()` | `main_character()` | Extract a column (give it main character energy) |
 | `slice_head()` | `send_it()` | Take the top rows and send it |
 | `count()` | `its_giving()` | Count occurrences (it's giving statistics) |
+| `left_join()` | `link_up()` | Merge datasets but keep all your day-ones (left table stays main squad)|
+| `right_join()` | `clout_chase()` | Merge, but the other chums call the shots on who stays (right table is main squad)|
+| `inner_join()` | `mutuals_only()` | Merge, but only keep rows where both tables are mutually following each other |
+| `full_join()` | `everyone_in_the_groupchat()` | Bring everyone, even if messy (keeps all rows) |
+| `anti_join()` | `ghost()` | Forget about those who don't vibe with you (remove non-matching rows)|
+| `semi_join()` | `only_the_reals()` | Just keep the rows that vibe with both tables (matching rows only) |
+
 
 ## Examples that slap
 
