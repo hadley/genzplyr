@@ -148,6 +148,7 @@ mtcars |>
 ## Debugging tips
 
 If something's not working:
+
 - Check your parentheses and commas
 - Make sure you're piping (`|>`) between functions
 - Verify column names (they're case-sensitive)
