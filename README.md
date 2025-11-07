@@ -28,6 +28,7 @@ pak::pak("hadley/genzplyr")
 | `pull()` | `main_character()` | Extract a column (give it main character energy) |
 | `slice_head()` | `send_it()` | Take the top rows and send it |
 | `count()` | `its_giving()` | Count occurrences (it's giving statistics) |
+ `slice_sample()` | `six_seven()` | Take a random sample |
 
 ## Examples that slap
 
@@ -127,6 +128,18 @@ mpg_values <- mtcars |>
 mean(mpg_values)  # Average MPG for 4-cylinder cars
 ```
 
+### Random sampling (six seven style)
+
+```r
+# Take a random sample of 8 rows
+mtcars |> six_seven(n = 8)
+
+# Take a random 25% sample
+mtcars |>
+  six_seven(prop = 0.25) |>
+  vibe_check(mpg, cyl, hp)
+```
+
 ### The full send
 
 ```r
@@ -184,6 +197,7 @@ PRs welcome! Got better GenZ slang? Submit a pull request and let's make this ev
 - **Send it**: Go for it, commit fully
 - **It's giving...**: It's giving off vibes of...
 - **Hits different**: Has a unique, special quality
+- **Six seven**: Random phrase said while moving both hands up and down with upward-facing palms
 
 ## License
 

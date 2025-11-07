@@ -179,6 +179,42 @@ bussin <- function(.data) {
   .data
 }
 
+#' Six seven - random sample
+#'
+#' Take a random sample of rows (slice_sample equivalent)
+#'
+#' @param .data A data frame or tibble
+#' @param ... Additional arguments passed to slice_sample()
+#' @param n Number of rows to sample
+#' @param prop Proportion of rows to sample (alternative to n)
+#' @param by Variables to group by
+#' @param weight_by Sampling weights
+#' @param replace Sample with replacement
+#' @return A data frame with randomly sampled rows
+#' @export
+#' @examples
+#' mtcars |> six_seven(n = 5)
+#' mtcars |> six_seven(prop = 0.25)
+six_seven <- function(
+  .data,
+  ...,
+  n,
+  prop,
+  by = NULL,
+  weight_by = NULL,
+  replace = FALSE
+) {
+  slice_sample(
+    .data,
+    ...,
+    n = n,
+    prop = prop,
+    by = by,
+    weight_by = weight_by,
+    replace = replace
+  )
+}
+
 .onAttach <- function(libname, pkgname) {
   packageStartupMessage("genzplyr loaded fr fr \U0001f485\nYour data wrangling is about to be bussin no cap")
 }
