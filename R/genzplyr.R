@@ -179,6 +179,17 @@ bussin <- function(.data) {
   .data
 }
 
+#' Fit check
+#'
+#' Don't get shooketh, spill the tea on your data frame
+#'
+#' @return x original x is (invisibly) returned, allowing `fit_check()` to be
+#'   used within a data pipeline.
+#' @export
+#' @usage NULL
+fit_check <- glimpse
+
+
 .onAttach <- function(libname, pkgname) {
   packageStartupMessage("genzplyr loaded fr fr \U0001f485\nYour data wrangling is about to be bussin no cap")
 }
