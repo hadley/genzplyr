@@ -2,6 +2,7 @@
 
 export(bussin)
 export(disband)
+export(fit_check)
 export(glow_up)
 export(its_giving)
 export(lowkey)
