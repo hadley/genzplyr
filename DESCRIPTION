@@ -1,11 +1,11 @@
-Package: genzplyr
+Package: grwm
 Title: dplyr but make it bussin fr fr no cap
 Version: 0.0.0.9000
 Authors@R: c(
     person("Hadley", "Wickham", , "hadley@posit.co", role = c("aut", "cre")),
     person("Posit Software, PBC", role = c("cph", "fnd"))
   )
-Description: `genzplyr` is an alternative syntax for `dplyr` that replaces 
+Description: `grwm` is an alternative syntax for `dplyr` that replaces 
     boring old function names with GenZ slang. Your data wrangling is about to hit different.
 License: MIT + file LICENSE
 Encoding: UTF-8
