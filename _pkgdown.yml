@@ -1,7 +1,7 @@
 url: https://hadley.github.io/genzplyr/
 template:
   bootstrap: 5
-.
+
 footer:
   structure:
     left: developed_by
