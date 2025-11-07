@@ -2,3 +2,10 @@ url: https://hadley.github.io/genzplyr/
 template:
   bootstrap: 5
 
+footer:
+  structure:
+    left: developed_by
+    right: built_with_pkgdown
+  components:
+    developed_by: "Vibe coded by Hadley Wickham (reppin' Posit Software, PBC)"
+    built_with_pkgdown: "[pkgdown](https://pkgdown.r-lib.org/) 2.1.3 lowkey the GOAT"
