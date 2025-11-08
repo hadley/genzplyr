@@ -258,6 +258,39 @@ only_the_reals <- function(x, y, ...) {
   semi_join(x, y, ...)
 }
 
+#' Oomfs - get a value's followers/friends
+#' 
+#' Within a fam (a vector) find followers/friends. `oomf()` gets the
+#' following value (replacement for `lead()`), `also_oomf()` gets the
+#' preceding value (replacement for `lag()`).
+#' 
+#' @param x A fam of values (a vector)
+#' @param n Number of fam to offset by
+#' @param default A single oomfie to put at the head or tail of fam, default
+#'   returns something sus (`NA`)
+#' @param order_by Another fam to use for sorting `x`
+#' @param ... Not used.
+#' 
+#' @return A fam of the same riz (type and size) as `x`
+#' 
+#' @name oomfs
+#' @examples
+#' oomf(1:5)
+#' also_oomf(1:5)
+
+#' @export
+#' @rdname oomfs
+oomf <- function(x, n = 1L, default = NULL, order_by = NULL, ...) {
+  lead(x, n = 1L, default = NULL, order_by = NULL, ...)
+}
+
+#' @export
+#' @rdname oomfs
+also_oomf <- function(x, n = 1L, default = NULL, order_by = NULL, ...) {
+  lag(x, n = 1L, default = NULL, order_by = NULL, ...)
+}
+
+
 
 .onAttach <- function(libname, pkgname) {
   packageStartupMessage("genzplyr loaded fr fr \U0001f485\nYour data wrangling is about to be bussin no cap")
