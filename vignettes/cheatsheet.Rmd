@@ -41,6 +41,14 @@ df |> lowkey(
   years_old = age,
   test_score = score
 )
+
+# Create new column based on condition (plot twist energy)
+df |> glow_up(
+  vibe = plot_twist(
+    mpg > 20 ~ "bussin",
+    TRUE     ~ "mid"
+  )
+)
 ```
 
 ### Sorting and arrangement

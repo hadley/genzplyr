@@ -258,6 +258,19 @@ only_the_reals <- function(x, y, ...) {
   semi_join(x, y, ...)
 }
 
+#' case_when()	plot_twist()
+#' 
+#' Switch up the plot depending on vibes (case_when equivalent)
+#' 
+#' @param ... A sequence of two-sided formulas. On the left: a logical condition (the vibe check). On the right: the value to assign when the vibe is true.
+#' @return A vector whose length matches the input; each element gets the first matching value or `NA` if none match.
+#' @examples
+#' mtcars |> glow_up(vibe = plot_twist(mpg > 20 ~ "bussin", TRUE ~ "mid"))
+#' @export
+plot_twist <- function(...) {
+  case_when(...)
+}
+
 
 .onAttach <- function(libname, pkgname) {
   packageStartupMessage("genzplyr loaded fr fr \U0001f485\nYour data wrangling is about to be bussin no cap")
