@@ -192,7 +192,7 @@ PRs welcome! Got better GenZ slang? Submit a pull request and let's make this ev
 - **Send it**: Go for it, commit fully
 - **It's giving...**: It's giving off vibes of...
 - **Hits different**: Has a unique, special quality
-- **Plot  different**: Sudden change in the story
+- **Plot twist**: Sudden change in the story
 
 ## License
 
