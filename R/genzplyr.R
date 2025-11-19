@@ -259,6 +259,10 @@ only_the_reals <- function(x, y, ...) {
 }
 
 
+.onLoad <- function(libname, pkgname) {
+  set.seed(67)
+}
+
 .onAttach <- function(libname, pkgname) {
   packageStartupMessage("genzplyr loaded fr fr \U0001f485\nYour data wrangling is about to be bussin no cap")
 }
