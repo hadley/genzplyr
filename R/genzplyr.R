@@ -187,7 +187,7 @@ bussin <- function(.data) {
 #' @param y A data frame or tibble (joining squad)
 #' @param by Columns to join by
 #' @return A merged data frame
-#' @example
+#' @examples
 #' df1 <- data.frame(id = 1:3, name = c("Alice", "Bob", "Charlie"))
 #' df2 <- data.frame(id = c(2, 3, 4), score = c(90, 85, 88))
 #' df1 |> link_up(df2, by = "id")
@@ -258,6 +258,20 @@ only_the_reals <- function(x, y, ...) {
   semi_join(x, y, ...)
 }
 
+#' Living rent free in your head (and data)
+#' 
+#' Move columns to the front or specific positions because they matter (relocate equivalent)
+#' 
+#' @param .data A data frame or tibble
+#' @param ... Columns to move
+#' @return A data frame with rearranged columns
+#' @export
+#' @examples
+#' # Move 'hp' to the front because it's living rent free
+#' mtcars |> rent_free(hp)
+rent_free <- function(.data, ...) {
+  relocate(.data, ...)
+}
 
 .onAttach <- function(libname, pkgname) {
   packageStartupMessage("genzplyr loaded fr fr \U0001f485\nYour data wrangling is about to be bussin no cap")

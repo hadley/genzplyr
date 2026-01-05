@@ -41,6 +41,10 @@ df |> lowkey(
   years_old = age,
   test_score = score
 )
+
+# Move columns (living rent free in your head)
+df |> rent_free(age)          # move to front
+df |> rent_free(score, .after = name)
 ```
 
 ### Sorting and arrangement
