@@ -2,9 +2,9 @@
 NULL
 
 #' Yeet rows from your data
-#' 
+#'
 #' Remove rows that don't pass the vibe check (filter equivalent)
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @param ... Logical predicates to keep rows
 #' @return A data frame with yeeted rows removed
@@ -16,9 +16,9 @@ yeet <- function(.data, ...) {
 }
 
 #' Vibe check your columns
-#' 
+#'
 #' Keep only the columns that pass the vibe check (select equivalent)
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @param ... Columns to keep
 #' @return A data frame with selected columns
@@ -30,9 +30,9 @@ vibe_check <- function(.data, ...) {
 }
 
 #' Glow up your data
-#' 
+#'
 #' Transform or create new columns (mutate equivalent)
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @param ... Name-value pairs of expressions
 #' @return A data frame with new/modified columns
@@ -44,9 +44,9 @@ glow_up <- function(.data, ...) {
 }
 
 #' No cap summary stats
-#' 
+#'
 #' Get the real stats, no cap (summarise equivalent)
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @param ... Name-value pairs of summary expressions
 #' @return A data frame with summary statistics
@@ -58,9 +58,9 @@ no_cap <- function(.data, ...) {
 }
 
 #' Sort by slay factor
-#' 
+#'
 #' Arrange rows by columns (arrange equivalent)
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @param ... Variables to sort by
 #' @return A sorted data frame
@@ -72,9 +72,9 @@ slay <- function(.data, ...) {
 }
 
 #' Squad up your data
-#' 
+#'
 #' Group by categories to analyze squads (group_by equivalent)
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @param ... Variables to group by
 #' @return A grouped data frame
@@ -86,9 +86,9 @@ squad_up <- function(.data, ...) {
 }
 
 #' Disband the squad
-#' 
+#'
 #' Remove grouping (ungroup equivalent)
-#' 
+#'
 #' @param .data A grouped data frame
 #' @return An ungrouped data frame
 #' @export
@@ -99,9 +99,9 @@ disband <- function(.data) {
 }
 
 #' Lowkey rename columns
-#' 
+#'
 #' Change column names on the down-low (rename equivalent)
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @param ... Name-value pairs (new_name = old_name)
 #' @return A data frame with renamed columns
@@ -113,9 +113,9 @@ lowkey <- function(.data, ...) {
 }
 
 #' Periodt - keep distinct rows
-#' 
+#'
 #' Remove duplicate rows, and that's on periodt (distinct equivalent)
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @param ... Optional columns to determine uniqueness
 #' @return A data frame with unique rows
@@ -127,9 +127,9 @@ periodt <- function(.data, ...) {
 }
 
 #' Main character energy - pull a column
-#' 
+#'
 #' Extract a column as a vector (pull equivalent)
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @param var Column to extract
 #' @return A vector
@@ -141,9 +141,9 @@ main_character <- function(.data, var) {
 }
 
 #' Send it - take the first n rows
-#' 
+#'
 #' Get the top rows (head/slice_head equivalent)
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @param n Number of rows to keep
 #' @return A data frame with first n rows
@@ -155,9 +155,9 @@ send_it <- function(.data, n = 6) {
 }
 
 #' Its giving... count occurrences
-#' 
+#'
 #' Count observations by group (count equivalent)
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @param ... Variables to count by
 #' @return A data frame with counts
@@ -169,9 +169,9 @@ its_giving <- function(.data, ...) {
 }
 
 #' Bussin analysis
-#' 
+#'
 #' Chain multiple operations when your analysis is absolutely bussin
-#' 
+#'
 #' @param .data A data frame or tibble
 #' @return The data frame (for piping)
 #' @export
@@ -180,9 +180,9 @@ bussin <- function(.data) {
 }
 
 #' left_join()	link_up()
-#' 
+#'
 #' Merge datasets but keep only your day-ones (left table stays main squad)
-#' 
+#'
 #' @param x A data frame or tibble (main squad)
 #' @param y A data frame or tibble (joining squad)
 #' @param by Columns to join by
@@ -197,9 +197,9 @@ link_up <- function(x, y, ...) {
 }
 
 #' right_join()	clout_chase()
-#' 
+#'
 #' Merge, but the other chums call the shots on who stays (right table is main squad)
-#' 
+#'
 #' @param x A data frame or tibble (main squad)
 #' @param y A data frame or tibble (joining squad)
 #' @param by Columns to join by
@@ -210,9 +210,9 @@ clout_chase <- function(x, y, ...) {
 }
 
 #' inner_join()	mutuals_only()
-#' 
+#'
 #' Merge, but only keep rows where both tables are mutually following each other
-#' 
+#'
 #' @param x A data frame or tibble
 #' @param y A data frame or tibble
 #' @param by Columns to join by
@@ -223,9 +223,9 @@ mutuals_only <- function(x, y, ...) {
 }
 
 #' full_join()	everyone_in_the_groupchat()
-#' 
+#'
 #' Bring everyone, even if messy (keeps all rows)
-#' 
+#'
 #' @param x A data frame or tibble
 #' @param y A data frame or tibble
 #' @return A merged data frame
@@ -235,9 +235,9 @@ everyone_in_the_groupchat <- function(x, y, ...) {
 }
 
 #' anti_join()	ghost()
-#' 
+#'
 #' Forget about those who don't vibe with you (remove non-matching rows)
-#' 
+#'
 #' @param x A data frame or tibble
 #' @param y A data frame or tibble
 #' @return A data frame with non-matching rows
@@ -247,9 +247,9 @@ ghost <- function(x, y, ...) {
 }
 
 #' semi_join()	only_the_reals()
-#' 
+#'
 #' Just keep the rows that vibe with both tables (matching rows only)
-#' 
+#'
 #' @param x A data frame or tibble
 #' @param y A data frame or tibble
 #' @return A data frame with matching rows
@@ -258,6 +258,37 @@ only_the_reals <- function(x, y, ...) {
   semi_join(x, y, ...)
 }
 
+#' bind_cols()	situationship()
+#'
+#' Combine data frames that are not quite a couple but a bit more than friends.
+#'
+#' @param .data A data frame or tibble
+#' @param ... Data frames to combine. Each argument can either be a data frame,
+#'   a list that could be a data frame, or a list of data frames.
+#' @return A data frame the same type as the first element of `...`.
+#' @export
+#' @examples
+#' mtcars[1:3,] |> situationship(him = 1:3, her = 3:1)
+situationship <- function(.data, ...) {
+  bind_cols(.data, ...)
+}
+
+#' bind_rows()  fam()
+#'
+#' Append some homies to a data frame.
+#'
+#' @param .data A data frame or tibble
+#' @param ... Data frames to combine. Each argument can either be a data frame,
+#'   a list that could be a data frame, or a list of data frames.
+#' @return A data frame the same type as the first element of `...`.
+#' @export
+#' @examples
+#' df1 <- data.frame(id = "bro", x = 1:2, y = letters[1:2])
+#' df2 <- data.frame(id = "sis", x = 4:5, z = 1:2)
+#' fam(df1,df2)
+fam <- function(.data, ...) {
+  bind_rows(.data, ...)
+}
 
 .onAttach <- function(libname, pkgname) {
   packageStartupMessage("genzplyr loaded fr fr \U0001f485\nYour data wrangling is about to be bussin no cap")

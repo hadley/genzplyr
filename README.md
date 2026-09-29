@@ -34,7 +34,8 @@ pak::pak("hadley/genzplyr")
 | `full_join()` | `everyone_in_the_groupchat()` | Bring everyone, even if messy (keeps all rows) |
 | `anti_join()` | `ghost()` | Forget about those who don't vibe with you (remove non-matching rows)|
 | `semi_join()` | `only_the_reals()` | Just keep the rows that vibe with both tables (matching rows only) |
-
+| `bind_cols()` | `situationship()` | Combine columns that are not quite a couple but a bit more than friends |
+| `bind_rows()` | `fam()` | Append some homies to a data frame |
 
 ## Examples that slap
 
@@ -191,6 +192,8 @@ PRs welcome! Got better GenZ slang? Submit a pull request and let's make this ev
 - **Send it**: Go for it, commit fully
 - **It's giving...**: It's giving off vibes of...
 - **Hits different**: Has a unique, special quality
+- **Situationship**: The mid-point between dating and not-dating
+- **Fam**: People you trust and consider close 
 
 ## License
 
