@@ -258,6 +258,19 @@ only_the_reals <- function(x, y, ...) {
   semi_join(x, y, ...)
 }
 
+#' Broooo 6 7
+#'
+#' Palms up weighing gesture, up and down
+#'
+#' @param .data A data frame or tibble
+#' @return Literally no idea
+#' @rdname sixseven
+#' @export
+`67` <- function(.data, ...){
+	n <- sample(6:7, 1)
+	slice_sample(.data, n = n, ...)
+}
+
 
 .onAttach <- function(libname, pkgname) {
   packageStartupMessage("genzplyr loaded fr fr \U0001f485\nYour data wrangling is about to be bussin no cap")
